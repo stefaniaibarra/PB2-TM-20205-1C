@@ -2,6 +2,7 @@ package ar.edu.unlam.dominio;
 
 public class Carta {
 	private Integer salud;
+	private Integer numero;  // en esta materia usamos mas las clases rapper 
 	
 	
 	public Carta () {
@@ -22,6 +23,18 @@ public class Carta {
 		}
 		
 		
+	}
+
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+		
+	}
+
+
+	public Integer getNumero() {
+		
+		return this.numero;
 	}
 
 }
