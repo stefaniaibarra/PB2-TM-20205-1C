@@ -11,13 +11,27 @@ public class Mazo {
 	
 	//costructor
 	public Mazo () {
-		this.cartas = new ArrayList<Carta>();
-		
+		this.cartas = new ArrayList<Carta>(); // <Nombra el tipo de elemento>
+		// las colecciones pueden guardar datos del mismo tipo 
 	}
 	
 	//metodos
 	public boolean agragarCarta(Carta carta) {
 		boolean agregado = false;
+		int contador = obtenerCantidadDeDuplicados(carta);
+		
+			if (this.cartas.size() < MAXIMO_CARTAS && contador < MAXIMO_DUPLICADA ){
+				agregado = this.cartas.add(carta);
+			}
+		return agregado;
+	}
+	
+	
+	
+	
+	
+
+	private int obtenerCantidadDeDuplicados(Carta carta) {
 		int contador = 0; 
 		
 		
@@ -33,11 +47,7 @@ public class Mazo {
 				}
 			
 			}
-		
-			if (this.cartas.size() < MAXIMO_CARTAS && contador < MAXIMO_DUPLICADA ){
-				agregado = this.cartas.add(carta);
-			}
-		return agregado;
+		return contador;
 	}
 
 }

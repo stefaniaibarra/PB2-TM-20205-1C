@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class ClaseDeTest {
+public class CartaTest {
   
 	
 	public void miTest() {
@@ -47,18 +47,30 @@ public class ClaseDeTest {
 		// preparacion 
 		 Carta carta = new Carta() ; 
 		 // ejecucion 
-		 carta.recibirDanio(120);
+		 carta.recibirDanio(20);
 		 
 		 //verificacion 
-		 int valorEsperado = 0;
+		 int valorEsperado = 80;
 		 int valorObtenido = carta.getSalud();
 		 
 		 assertEquals(valorEsperado, valorObtenido);
 		 
 	 }
+	 @Test
+	 public void dadoQueExisteUnaCartaCon100SaludAlRicibir120DanioDebeQuedar0Salud() {
+			// preparacion 
+			 Carta carta = new Carta() ; 
+			 // ejecucion 
+			 carta.recibirDanio(120);
+			 
+			 //verificacion 
+			 int valorEsperado = 0;
+			 int valorObtenido = carta.getSalud();
+			 
+			 assertEquals(valorEsperado, valorObtenido);
+			 
 	 
-	 
-	 
+	 }
 	 
 	
 }

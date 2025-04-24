@@ -18,6 +18,8 @@ public class MazoTest {
 		this.mazo = new Mazo();
 	}
 	
+
+	
 	@Test 
 	public void dadoQueExistenCartasCuandoAgregoUnaCartaAlMazoObtengoUnResultadiPositivo () {
 		//preparacion 
