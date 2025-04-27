@@ -26,14 +26,13 @@ public class Mazo {
 		return agregado;
 	}
 	
-	
+
 	
 	
 	
 
 	private int obtenerCantidadDeDuplicados(Carta carta) {
 		int contador = 0; 
-		
 		
 			if (cartas.contains(carta)) {
 				for (Carta cartaDeColeccion  : cartas) { // itera todos los elemtos 

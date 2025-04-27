@@ -16,9 +16,9 @@ public class Carta {
 	}
 
 	public void recibirDanio(int danio) {
-		if (danio <= this.salud) {
+		if (danio <= this.salud ) {
 			this.salud -= danio;	
-		}else {
+		} else if (danio > this.salud){
 			this.salud =0;
 		}
 		
