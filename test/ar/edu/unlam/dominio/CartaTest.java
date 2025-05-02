@@ -83,5 +83,13 @@ public class CartaTest {
 		 this.carta.recibirDanio(0);
 	     assertEquals(100, carta.getSalud());
 	 }
+	 
+	 @Test 
+	  public void dadoQueExistenDosCartasPuedoComprobarSiSonIguales() {
+		 
+		 
+		 
+		 
+	 }
 	
 }

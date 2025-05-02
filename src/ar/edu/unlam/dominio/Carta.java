@@ -1,5 +1,7 @@
 package ar.edu.unlam.dominio;
 
+import java.util.Objects;
+
 public class Carta {
 	private Integer salud;
 	private Integer numero;  // en esta materia usamos mas las clases rapper 
@@ -37,4 +39,26 @@ public class Carta {
 		return this.numero;
 	}
 
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(numero, salud);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Carta other = (Carta) obj;
+		return Objects.equals(numero, other.numero) && Objects.equals(salud, other.salud);
+	}
+
+	
+	
+	
 }
